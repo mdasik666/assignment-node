@@ -13,7 +13,7 @@ const crudController = require("./route/employeeRoute")
 
 app.use("/api/employee",crudController)
 
-const port = process.env.PORT || 3002
-app.listen(3003, ()=>{
+const port = process.env.PORT
+app.listen(port, ()=>{
     console.log(`Server is running on port ${port}.`)
 })
