@@ -1,37 +1,37 @@
 module.exports = (sequelize, DataTypes) => {
-    const Employee = sequelize.define('employee',{
-        firstname:{
-            type:DataTypes.STRING,
-            allowNull:false,   
-            required:true         
-        },
-        lastname:{
-            type:DataTypes.STRING,
-            allowNull:true                   
-        },
-        email:{
+    const Employee = sequelize.define('employee', {
+        firstname: {
             type: DataTypes.STRING,
-            allowNull:false,       
-            required:true,
-            unique:true                                  
+            allowNull: false,
+            required: true
         },
-        gender:{
+        lastname: {
             type: DataTypes.STRING,
-            allowNull:false,       
-            required:true
+            allowNull: true
         },
-        age:{
+        email: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            required: true,
+            unique: true
+        },
+        gender: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            required: true
+        },
+        age: {
             type: DataTypes.INTEGER,
-            allowNull:false,
-            required:true
+            allowNull: false,
+            required: true
         },
-        city:{
-            type:DataTypes.TEXT,
-            allowNull:true
+        city: {
+            type: DataTypes.TEXT,
+            allowNull: true
         },
-        salary:{
-            type:DataTypes.NUMBER,
-            allowNull:true
+        salary: {
+            type: DataTypes.FLOAT,
+            allowNull: true
         }
     })
     return Employee
